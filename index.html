@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+
+    <div class="container-fluid">
+        <div class="container">
+        <div class="search" >
+        <h1>กาแฟของแอสปายสาทรท่าพระ</h1>
+        <input type="text" name="" id="find" placeholder="ค้นหาเมนูกาแฟตรงนี้จ้ะ"  onkeyup="search()">
+        </div>
+
+    <div class="product-list">
+        <div class="product">
+        <h3>ไมโลย้อนไว</h3>
+        <img src="picture/1.jpg" width="500px">
+        </div>
+
+    <div class="product">
+        <h3>หอมสุวรรณ</h3>
+        <img src="picture/2.jpg" width="500px">
+        </div>
+
+    <div class="product">
+        <h3>หอมสุวรรณ2</h3>
+        <img src="picture/3.jpg" width="500px">
+        </div>
+
+    <div class="product">
+        <h3>ซอล์เท็ดคาราเมลคอฟฟี่16ออนซ์</h3>
+        <img src="picture/4.jpg" width="500px">
+        </div>
+    
+    <div class="product">
+        <h3>ครีมชีสคาปูชิโน่16ออนซ์</h3>
+        <img src="picture/5.jpg" width="500px">
+        </div>
+
+    <div class="product">
+        <h3>ซอล์เท็ดคาราเมลลาเต้16ออนซ์</h3>
+        <img src="picture/6.jpg" width="500px">
+        </div>
+
+    <div class="product">
+        <h3>วานิลลาลาเต้เย็น16ออซ์</h3>
+        <img src="picture/7.jpg" width="500px">
+        </div>
+
+    <hr>
+
+    <div class="product">
+        <h3>ชาเอิร์ลเกรย์ครีมชีส</h3>
+        <img src="photo/a.jpg" width="500px">
+        </div>
+
+    <div class="product">
+        <h3>ชาเอิร์ลเกรย์ยูซุครีมชีส</h3>
+        <img src="photo/b.jpg" width="500px">
+        </div>
+
+    <div class="product">
+        <h3>อเมริกาโน่ครีมชีส</h3>
+        <img src="photo/c.jpg" width="500px">
+        </div>
+
+    <div class="product">
+        <h3>อเมริกาโน่ครีมชีสทิรามิสุครีมชีส</h3>
+        <img src="photo/d.jpg" width="500px">
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        function search() {
+        let filter = document.getElementById('find').value.toUpperCase();
+        let item = document.querySelectorAll('.product');
+        let l = document.getElementsByTagName('h3');
+        for(var i = 0;i<=l.length;i++){
+        let a=item[i].getElementsByTagName('h3')[0];
+        let value=a.innerHTML || a.innerText || a.textContent;
+        if(value.toUpperCase().indexOf(filter) > -1) {
+        item[i].style.display="";
+        }
+        else
+        {
+        item[i].style.display="none";
+        }
+        }
+        }
+    </script>
+
+ </body>
+ </html>
